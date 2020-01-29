@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Lily+Script+One);
+body,html{
+  height:100%;
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+  font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: 'Lily Script One', cursive;
+  background: rgba(29,120,239,1);
+background: -moz-linear-gradient(top, rgba(29,120,239,1) 0%, rgba(129,243,253,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(29,120,239,1)), color-stop(100%, rgba(129,243,253,1)));
+background: -webkit-linear-gradient(top, rgba(29,120,239,1) 0%, rgba(129,243,253,1) 100%);
+background: -o-linear-gradient(top, rgba(29,120,239,1) 0%, rgba(129,243,253,1) 100%);
+background: -ms-linear-gradient(top, rgba(29,120,239,1) 0%, rgba(129,243,253,1) 100%);
+background: linear-gradient(to bottom, rgba(29,120,239,1) 0%, rgba(129,243,253,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d78ef', endColorstr='#81f3fd', GradientType=0 );
+}
+#content{
+  text-align:center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size:3em;
+  margin-bottom:5px;
+}
+#top{
+  height:150px;
+  position:absolute;
+  left:0;
+  right:0;
+  text-align:center;
+}
+#bottom{
+  height:150px;
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  text-align:center;
+}
+#top .snowflake{
+  position:relative;
+  bottom:150px;
+}
+.snowflake{
+  height:300px;
+  animation-iteration-count: infinite;
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+.snowflakecenter{fill:none;stroke:#fff;stroke-width:4;stroke-miterlimit:10;}
+.branch line{fill:none;stroke:#fff;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10;}
+
+@keyframes rotate {
+  50%{height:280px;}
+  100% {-ms-transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);}
+}
+
+@media screen and (max-height: 340px) {
+  html,body{
+    height:auto;
+    min-height:100%;
+    overflow:initial;
+    overflow-x:hidden;
+  }
+  #content{
+    transform:translateY(0%);
+  }
+  #content,#top,#bottom{
+    position:initial;
+  }
+  #bottom{
+    overflow:hidden;
+  }
+}
